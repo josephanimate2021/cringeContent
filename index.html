@@ -1,12 +1,21 @@
-<html><head>
-<script>
-const params = new Proxy(new URLSearchParams(window.location.search), {
-  get: (searchParams, prop) => searchParams.get(prop),
-});
-let title = params.vtitle;
-let id = params.vid;
-let body = docuemnt.write(`<video><source src="${id}.mp4" type="video/mp4"></video>`);
-</script>
-<title><script>document.write(title);</script></title>
-<head>
-<body>
+<html>
+  <head>
+    <script>
+      const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+      });
+      let title = params.vtitle;
+      let id = params.vid;
+    </script>
+    <title>
+      <script>
+        document.write(title);
+      </script>
+    </title>
+  </head>
+  <body>
+    <script>
+      docuemnt.write(`<video><source src="${id}.mp4" type="video/mp4"></video>`);
+    </script>
+  </body>
+</html>
