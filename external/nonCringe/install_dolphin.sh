@@ -15,5 +15,5 @@ cmake ..
 make -j$(nproc)
 sudo make install
 cmake -Dbindir=../Binary/Linux -Ddatadir=../Binary/Linux ..
-echo Enjoy!
+echo "Enjoy!"
 dolphin-emu
